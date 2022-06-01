@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:text="    SCORE IS"
                 android:textStyle="bold"
-                android:layout_margin="200px"
+                android:layout_margin="100px"
                 android:padding="50px"
                 android:textSize="34sp" />
 
@@ -32,10 +32,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="200px"
-                android:padding="50px"
+                android:padding="100px"
+                android:text="      TextView"
                 android:textSize="34sp"
-                android:textStyle="bold"
-                android:text="      TextView" />
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/play_again"
@@ -44,8 +44,8 @@
                 android:clickable="true"
                 android:onClick="activity1_go_to"
                 android:text="PLAY AGAIN"
-                android:layout_margin="200px"
-                android:padding="50px"
+                android:layout_margin="50px"
+                android:padding="30px"
                 android:textSize="14sp"/>
         </LinearLayout>
     </LinearLayout>
