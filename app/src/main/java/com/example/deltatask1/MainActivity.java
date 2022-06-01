@@ -300,7 +300,7 @@ public class MainActivity<array, intArray> extends AppCompatActivity {
         else
         {
             lives=lives-1;
-            if(lives >0)
+            if(lives >=1)
                 OnFalse1();
             else
                 OnFalse2();
