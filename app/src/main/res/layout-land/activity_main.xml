@@ -378,7 +378,6 @@
             android:background="@drawable/highlight_colour_select"
             android:clickable="true"
             android:onClick="set_tile1"
-            android:padding="15px"
             android:text="num1"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -393,7 +392,6 @@
             android:background="@drawable/highlight_colour_select"
             android:clickable="true"
             android:onClick="set_tile2"
-            android:padding="15px"
             android:text="num2"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -408,7 +406,6 @@
             android:background="@drawable/highlight_colour_select"
             android:clickable="true"
             android:onClick="set_tile3"
-            android:padding="15px"
             android:text="num3"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -423,7 +420,6 @@
             android:background="@drawable/highlight_colour_select"
             android:clickable="true"
             android:onClick="set_tile4"
-            android:padding="15px"
             android:text="num4"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -438,7 +434,6 @@
             android:background="@drawable/highlight_colour_select"
             android:clickable="true"
             android:onClick="set_tile5"
-            android:padding="15px"
             android:text="num5"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -481,7 +476,6 @@
             android:background="@drawable/highlight_colour_select"
             android:clickable="true"
             android:onClick="set_tile7"
-            android:padding="15px"
             android:text="num7"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -496,7 +490,6 @@
             android:background="@drawable/highlight_colour_select"
             android:clickable="true"
             android:onClick="set_tile8"
-            android:padding="15px"
             android:text="num8"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -511,7 +504,6 @@
             android:background="@drawable/highlight_colour_select"
             android:clickable="true"
             android:onClick="set_tile9"
-            android:padding="15px"
             android:text="num9"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -526,7 +518,6 @@
             android:background="@drawable/highlight_colour_select"
             android:clickable="true"
             android:onClick="set_tile10"
-            android:padding="15px"
             android:text="num10"
             android:textColor="@color/black"
             android:textSize="20dp" />
