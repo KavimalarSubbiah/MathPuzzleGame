@@ -425,7 +425,7 @@
             android:layout_width="220px"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="10px"
+            android:layout_margin="5px"
             android:background="@drawable/highlight_colour_select"
             android:padding="5px"
             android:onClick="set_tile5"

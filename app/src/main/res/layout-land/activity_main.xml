@@ -8,19 +8,17 @@
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MATH PUZZLE GAME"
-        android:textColor="@color/white"
-        android:textSize="34sp"/>
-
     <androidx.gridlayout.widget.GridLayout
-        android:layout_width="410dp"
-        android:layout_height="666dp"
+        android:id="@+id/gridLayout"
+        android:layout_width="367dp"
+        android:layout_height="368dp"
         app:columnCount="5"
-        tools:layout_editor_absoluteY="65dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.336">
 
         <TextView
             android:id="@+id/maintile1"
@@ -43,7 +41,6 @@
             android:layout_marginTop="10px"
             android:layout_marginRight="10px"
             android:layout_weight="1"
-
             android:text="+"
             android:textColor="@color/white"
             android:textSize="30dp" />
@@ -74,8 +71,8 @@
 
         <TextView
             android:id="@+id/taddresult"
-            android:layout_width="200px"
-            android:layout_height="90px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="10px"
             android:text="addres"
@@ -84,21 +81,456 @@
             android:textStyle="bold"
             app:layout_column="4"
             app:layout_row="0" />
+
         <TextView
             android:id="@+id/maintile3"
             android:layout_width="200px"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20px"
             android:layout_marginRight="10px"
-            android:background="@color/sand"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:textColor="@color/black"
+            android:background="@color/sand"
             android:clickable="true"
-            android:padding="10px"
             android:onClick="set_maintile3"
-            android:text="?" />
+            android:padding="10px"
+            android:text="?"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="40px"
+            android:layout_height="90px"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="10px"
+            android:layout_weight="1"
+            android:text="-"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/maintile4"
+            android:layout_width="200px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="10px"
+            android:layout_weight="1"
+            android:background="@color/sand"
+            android:clickable="true"
+            android:onClick="set_maintile4"
+            android:padding="10px"
+            android:text="?"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:layout_marginRight="10px"
+            android:layout_weight="1"
+            android:text="="
+            android:textColor="@color/white"
+            android:textSize="34dp" />
+
+        <TextView
+            android:id="@+id/tsubresult"
+            android:layout_width="200px"
+            android:layout_height="90px"
+            android:layout_marginTop="20px"
+            android:layout_weight="1"
+            android:padding="10px"
+            android:text="subres"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/maintile5"
+            android:layout_width="200px"
+            android:layout_height="90px"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="10px"
+            android:layout_weight="1"
+            android:background="@color/sand"
+            android:clickable="true"
+            android:onClick="set_maintile5"
+            android:padding="10px"
+            android:text="?"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="40px"
+            android:layout_height="90px"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="10px"
+            android:layout_weight="1"
+            android:text="*"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/maintile6"
+            android:layout_width="200px"
+            android:layout_height="90px"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="10px"
+            android:layout_weight="1"
+            android:background="@color/sand"
+            android:clickable="true"
+            android:onClick="set_maintile6"
+            android:padding="10px"
+            android:text="?"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/multires"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:layout_marginRight="10px"
+            android:layout_weight="1"
+            android:text="="
+            android:textColor="@color/white"
+            android:textSize="34dp" />
+
+        <TextView
+            android:id="@+id/tmultiresult"
+            android:layout_width="200px"
+            android:layout_height="90px"
+            android:layout_marginTop="20px"
+            android:layout_weight="1"
+            android:padding="10px"
+            android:text="mulres"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/maintile7"
+            android:layout_width="200px"
+            android:layout_height="90px"
+            android:layout_marginTop="20px"
+            android:layout_weight="1"
+            android:background="@color/sand"
+            android:clickable="true"
+            android:onClick="set_maintile7"
+            android:padding="10px"
+            android:text="?"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="40px"
+            android:layout_height="90px"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="10px"
+            android:layout_weight="1"
+            android:text="/"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/maintile8"
+            android:layout_width="200px"
+            android:layout_height="90px"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="10px"
+            android:layout_weight="1"
+            android:background="@color/sand"
+            android:clickable="true"
+            android:onClick="set_maintile8"
+            android:padding="10px"
+            android:text="?"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:layout_marginRight="10px"
+            android:layout_weight="1"
+            android:text="="
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/tdivresult"
+            android:layout_width="200px"
+            android:layout_height="90px"
+            android:layout_marginTop="20px"
+            android:layout_weight="1"
+            android:padding="10px"
+            android:text="divres"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/maintile9"
+            android:layout_width="200px"
+            android:layout_height="90px"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="10px"
+            android:layout_weight="1"
+            android:background="@color/sand"
+            android:clickable="true"
+            android:onClick="set_maintile9"
+            android:padding="10px"
+            android:text="?"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="40px"
+            android:layout_height="90px"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="10px"
+            android:layout_weight="1"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/maintile10"
+            android:layout_width="200px"
+            android:layout_height="90px"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="10px"
+            android:layout_weight="1"
+            android:background="@color/sand"
+            android:clickable="true"
+            android:onClick="set_maintile10"
+            android:padding="10px"
+            android:text="?"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:layout_marginRight="10px"
+            android:layout_weight="1"
+            android:text="="
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/taddresult1"
+            android:layout_width="200px"
+            android:layout_height="90px"
+            android:layout_marginTop="20px"
+            android:layout_weight="1"
+            android:padding="10px"
+            android:text="addres1"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
     </androidx.gridlayout.widget.GridLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="248dp"
+        android:layout_height="57dp"
+        android:layout_margin="30px"
+        android:clickable="true"
+        android:onClick="check_eqns"
+        android:padding="20px"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.646" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="280dp"
+        android:layout_height="39dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.959"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.174">
+
+        <TextView
+            android:id="@+id/num1"
+            android:layout_width="220px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5px"
+            android:layout_marginRight="5px"
+            android:layout_weight="1"
+            android:background="@drawable/highlight_colour_select"
+            android:clickable="true"
+            android:onClick="set_tile1"
+            android:padding="15px"
+            android:text="num1"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/num2"
+            android:layout_width="220px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5px"
+            android:layout_marginRight="5px"
+            android:layout_weight="1"
+            android:background="@drawable/highlight_colour_select"
+            android:clickable="true"
+            android:onClick="set_tile2"
+            android:padding="15px"
+            android:text="num2"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/num3"
+            android:layout_width="220px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5px"
+            android:layout_marginRight="5px"
+            android:layout_weight="1"
+            android:background="@drawable/highlight_colour_select"
+            android:clickable="true"
+            android:onClick="set_tile3"
+            android:padding="15px"
+            android:text="num3"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/num4"
+            android:layout_width="220px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5px"
+            android:layout_marginRight="5px"
+            android:layout_weight="1"
+            android:background="@drawable/highlight_colour_select"
+            android:clickable="true"
+            android:onClick="set_tile4"
+            android:padding="15px"
+            android:text="num4"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/num5"
+            android:layout_width="220px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5px"
+            android:layout_marginRight="5px"
+            android:layout_weight="1"
+            android:background="@drawable/highlight_colour_select"
+            android:clickable="true"
+            android:onClick="set_tile5"
+            android:padding="15px"
+            android:text="num5"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="39dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.959"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3">
+
+        <TextView
+            android:id="@+id/num6"
+            android:layout_width="220px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5px"
+            android:layout_marginRight="5px"
+            android:layout_weight="1"
+            android:background="@drawable/highlight_colour_select"
+            android:clickable="true"
+            android:onClick="set_tile6"
+            android:text="num6"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/num7"
+            android:layout_width="220px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5px"
+            android:layout_marginRight="5px"
+            android:layout_weight="1"
+            android:background="@drawable/highlight_colour_select"
+            android:clickable="true"
+            android:onClick="set_tile7"
+            android:padding="15px"
+            android:text="num7"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/num8"
+            android:layout_width="220px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5px"
+            android:layout_marginRight="5px"
+            android:layout_weight="1"
+            android:background="@drawable/highlight_colour_select"
+            android:clickable="true"
+            android:onClick="set_tile8"
+            android:padding="15px"
+            android:text="num8"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/num9"
+            android:layout_width="220px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5px"
+            android:layout_marginRight="5px"
+            android:layout_weight="1"
+            android:background="@drawable/highlight_colour_select"
+            android:clickable="true"
+            android:onClick="set_tile9"
+            android:padding="15px"
+            android:text="num9"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/num10"
+            android:layout_width="220px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5px"
+            android:layout_marginRight="5px"
+            android:layout_weight="1"
+            android:background="@drawable/highlight_colour_select"
+            android:clickable="true"
+            android:onClick="set_tile10"
+            android:padding="15px"
+            android:text="num10"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
