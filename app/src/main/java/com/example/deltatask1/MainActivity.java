@@ -1,9 +1,16 @@
 package com.example.deltatask1;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.View;
 import java.util.*;
 import java.io.*;
@@ -11,6 +18,7 @@ import android.widget.Button;
 import android.content.DialogInterface;
 import android.widget.TextView;
 import android.content.Intent;
+import android.os.Vibrator;
 
 public class MainActivity<array, intArray> extends AppCompatActivity {
     private TextView num1;
@@ -51,6 +59,7 @@ public class MainActivity<array, intArray> extends AppCompatActivity {
     private int a9;
     private int flag;
     private int addresult_checker;
+    private int addresult;
     private int subresult_checker;
     private int multiresult_checker;
     private int divresult_checker;
@@ -63,12 +72,15 @@ public class MainActivity<array, intArray> extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         generate_equations();
+
     }
+
+
     public void generate_equations(){
 
         int min=0;
         int max=100;
-        int addresult=(int)Math.floor(Math.random()*(max-min+1)+min);
+        addresult=(int)Math.floor(Math.random()*(max-min+1)+min);
         int max1=addresult;
         int add1=(int)Math.floor(Math.random()*(max1-min+1)+min);
         int add2=addresult-add1;
@@ -254,6 +266,7 @@ public class MainActivity<array, intArray> extends AppCompatActivity {
         maintile10.setText(String.valueOf(var));
         var=0;
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public void check_eqns(View v){
         flag=0;
         //String x1= (String) maintile1.getText();
@@ -291,6 +304,7 @@ public class MainActivity<array, intArray> extends AppCompatActivity {
                 }
                 else{
                     OnFalse2();
+
                 }
             } else {
                 score=score+5;
@@ -355,4 +369,5 @@ public class MainActivity<array, intArray> extends AppCompatActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
+
 }
