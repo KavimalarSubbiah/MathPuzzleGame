@@ -61,17 +61,84 @@ public class MainActivity<array, intArray> extends AppCompatActivity {
     private int addresult_checker;
     private int addresult;
     private int subresult_checker;
+    private int subresult;
     private int multiresult_checker;
+    private int multiresult;
     private int divresult_checker;
+    private int divresult;
     private int addresult1_checker;
+    private int addresult1;
     public int lives=3;
     public int score=0;
+    Integer[] array = new Integer[10];
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         generate_equations();
+        if (savedInstanceState != null) {
+            addresult= savedInstanceState.getInt("addresult");
+            taddresult.setText(String.valueOf(addresult));
+        }
+        if (savedInstanceState != null) {
+            subresult= savedInstanceState.getInt("subresult");
+            tsubresult.setText(String.valueOf(subresult));
+        }
+        if (savedInstanceState != null) {
+            multiresult= savedInstanceState.getInt("multiresult");
+            tmultiresult.setText(String.valueOf(multiresult));
+        }
+        if (savedInstanceState != null) {
+            divresult= savedInstanceState.getInt("divresult");
+            tdivresult.setText(String.valueOf(divresult));
+        }
+        if (savedInstanceState != null) {
+            addresult1= savedInstanceState.getInt("addresult1");
+            taddresult1.setText(String.valueOf(addresult1));
+        }
+        if (savedInstanceState != null) {
+            array[0]= savedInstanceState.getInt("num1");
+            num1.setText(String.valueOf(array[0]));
+        }
+        if (savedInstanceState != null) {
+            array[1]= savedInstanceState.getInt("num2");
+            num2.setText(String.valueOf(array[1]));
+        }
+        if (savedInstanceState != null) {
+            array[2]= savedInstanceState.getInt("num3");
+            num3.setText(String.valueOf(array[2]));
+        }
+        if (savedInstanceState != null) {
+            array[3]= savedInstanceState.getInt("num4");
+            num4.setText(String.valueOf(array[3]));
+        }
+        if (savedInstanceState != null) {
+            array[4]= savedInstanceState.getInt("num5");
+            num5.setText(String.valueOf(array[4]));
+        }
+        if (savedInstanceState != null) {
+            array[5]= savedInstanceState.getInt("num6");
+            num6.setText(String.valueOf(array[5]));
+        }
+        if (savedInstanceState != null) {
+            array[6]= savedInstanceState.getInt("num7");
+            num7.setText(String.valueOf(array[6]));
+        }
+        if (savedInstanceState != null) {
+            array[7]= savedInstanceState.getInt("num8");
+            num8.setText(String.valueOf(array[7]));
+        }
+        if (savedInstanceState != null) {
+            array[8]= savedInstanceState.getInt("num9");
+            num9.setText(String.valueOf(array[8]));
+        }
+        if (savedInstanceState != null) {
+            array[9]= savedInstanceState.getInt("num10");
+            num10.setText(String.valueOf(array[9]));
+        }
+
 
     }
 
@@ -84,22 +151,22 @@ public class MainActivity<array, intArray> extends AppCompatActivity {
         int max1=addresult;
         int add1=(int)Math.floor(Math.random()*(max1-min+1)+min);
         int add2=addresult-add1;
-        int subresult=(int)Math.floor(Math.random()*(max-min+1)+min);
+        subresult=(int)Math.floor(Math.random()*(max-min+1)+min);
         int min2=subresult;
         int max2=100;
         int sub1=(int)Math.floor(Math.random()*(max2-min2+1)+min2);
         int sub2=sub1-subresult;
         int multi1=(int)Math.floor(Math.random()*(max-min+1)+min);
         int multi2=(int)Math.floor(Math.random()*(max-min+1)+min);
-        int multiresult=multi1*multi2;
+        multiresult=multi1*multi2;
         int div2=(int)Math.floor(Math.random()*(max-min+1)+min);
-        int divresult=(int)Math.floor(Math.random()*(max-min+1)+min);
+        divresult=(int)Math.floor(Math.random()*(max-min+1)+min);
         int div1=div2*divresult;
         int add3=(int)Math.floor(Math.random()*(max-min+1)+min);
         int add4=(int)Math.floor(Math.random()*(max-min+1)+min);
-        int addresult1=add3+add4;
+        addresult1=add3+add4;
 
-        Integer[] array = new Integer[10];
+        //Integer[] array = new Integer[10];
         array[0] = add1;
         array[1] = add2;
         array[2] = sub1;
@@ -368,6 +435,27 @@ public class MainActivity<array, intArray> extends AppCompatActivity {
 
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("addresult", addresult);
+        outState.putInt("subresult", subresult);
+        outState.putInt("multiresult",multiresult);
+        outState.putInt("divresult",divresult);
+        outState.putInt("addresult1",addresult1);
+        outState.putInt("num1",array[0]);
+        outState.putInt("num2",array[1]);
+        outState.putInt("num3",array[2]);
+        outState.putInt("num4",array[3]);
+        outState.putInt("num5",array[4]);
+        outState.putInt("num6",array[5]);
+        outState.putInt("num7",array[6]);
+        outState.putInt("num8",array[7]);
+        outState.putInt("num9",array[8]);
+        outState.putInt("num10",array[9]);
     }
 
 }
