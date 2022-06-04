@@ -5,6 +5,9 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.os.Vibrator;
+
 import android.app.AlertDialog;
 import android.os.Build;
 import android.os.Bundle;
@@ -371,7 +374,6 @@ public class MainActivity<array, intArray> extends AppCompatActivity {
                 }
                 else{
                     OnFalse2();
-
                 }
             } else {
                 score=score+5;
@@ -412,6 +414,8 @@ public class MainActivity<array, intArray> extends AppCompatActivity {
         alertDialog.show();
     }
     public void OnFalse2(){
+
+
         AlertDialog.Builder builder
                 = new AlertDialog
                 .Builder(MainActivity.this);
