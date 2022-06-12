@@ -141,8 +141,10 @@ public class MainActivity<array, intArray> extends AppCompatActivity {
             array[9]= savedInstanceState.getInt("num10");
             num10.setText(String.valueOf(array[9]));
         }
-
-
+        if (savedInstanceState != null) {
+            a_= savedInstanceState.getInt("maintile");
+            maintile1.setText(String.valueOf(a_));
+        }
     }
 
 
@@ -467,6 +469,7 @@ public class MainActivity<array, intArray> extends AppCompatActivity {
         outState.putInt("num8",array[7]);
         outState.putInt("num9",array[8]);
         outState.putInt("num10",array[9]);
+        outState.putInt("maintile1",a_);
     }
 
 }
